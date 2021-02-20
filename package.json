@@ -1,0 +1,25 @@
+{
+  "name": "coconut-malld",
+  "version": "1.0.1",
+  "description": "You just got coconut mall'd",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "discord.js-light": "^3.5.3",
+    "ytdl-core": "^4.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Million900o/coconut-malld.git"
+  },
+  "author": "MILLION",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Million900o/coconut-malld/issues"
+  },
+  "homepage": "https://github.com/Million900o/coconut-malld#readme"
+}
