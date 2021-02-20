@@ -65,7 +65,7 @@ function runShit() {
   for (const channel of channels) {
     // Join the channel and play it
     channel.join().then(connection => {
-      const dispatcher = connection.play(PATH, { volume: 0.3 });
+      const dispatcher = connection.play(PATH, { volume: 0.2 });
 
       // Success!!!!!
       log(colors.green(`Coconut mall'd ${channel.guild.id}`));
