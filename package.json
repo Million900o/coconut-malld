@@ -4,6 +4,7 @@
   "description": "You just got coconut mall'd",
   "main": "index.js",
   "dependencies": {
+    "@discordjs/opus": "^0.4.0",
     "colors": "^1.4.0",
     "discord.js-light": "^3.5.3",
     "ytdl-core": "^4.5.0"
