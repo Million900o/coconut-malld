@@ -114,10 +114,5 @@ ${require('util').inspect(Object.entries(process.memoryUsage()).reduce((T, [K, V
   }
 })
 
-// Make sure im not getting shit events that I don't need
-client.on('raw', (raw) => {
-  if (raw.t && !['READY', 'GUILD_CREATE', 'MESSAGE_CREATE', 'VOICE_STATE_UPDATE', 'VOICE_SERVER_UPDATE'].includes(raw.t)) { log(colors.red(raw.t)) }
-})
-
 // Login
 client.login(config.token)
