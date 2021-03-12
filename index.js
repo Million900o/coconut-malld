@@ -29,7 +29,7 @@ const client = new Discord.Client({
 /**
  * Date function for logs
  */
-function getDate() {
+function getDate () {
   const date = new Date()
   return colors.cyan(`${date.toLocaleTimeString()} : ${date.toLocaleDateString()}`)
 }
@@ -38,16 +38,16 @@ function getDate() {
  * Format the logs nicely
  * @param  {...any} args The arguments to be logged
  */
-function log(...args) {
+function log (...args) {
   const msg = args.map(arg => colors.bold(arg))
   console.log(getDate(), '|', ...msg)
 }
 
 /**
  * Coconut mall a channel
- * @param {Discord.Channel} channel 
+ * @param {Discord.Channel} channel
  */
-function coconutMall(channel) {
+function coconutMall (channel) {
   // Join the channel and play it
   channel.join().then(connection => {
     const dispatcher = connection.play(PATH, { volume: 0.1 })
@@ -76,7 +76,7 @@ function coconutMall(channel) {
 /**
  * Grab all of the channels
  */
-function runShit() {
+function runShit () {
   // Get all channels
   // Rules:
   //  * No channels can be of the same guild
@@ -111,15 +111,15 @@ setInterval(runShit, TIME)
 client.on('message', async (msg) => {
   if (msg.content === 'cm!force') {
     if (msg.member.voice.channel) {
-      coconutMall(msg.member.voice.channel);
-      return msg.channel.send('You must be in a voice channel');;
-    } else return msg.channel.send('You must be in a voice channel');
+      coconutMall(msg.member.voice.channel)
+      return msg.channel.send('You must be in a voice channel')
+    } else return msg.channel.send('You must be in a voice channel')
   }
 
   if (msg.content === 'cm!mem') {
     return msg.channel.send(`\`\`\`js
-    ${require('util').inspect(Object.entries(process.memoryUsage()).reduce((T, [K, V]) => (T[K] = (V / (1024 ** 2)).toFixed(1) + 'MB', T), {}))}
-    \`\`\``)
+${require('util').inspect(Object.entries(process.memoryUsage()).reduce((T, [K, V]) => (T[K] = (V / (1024 ** 2)).toFixed(1) + 'MB', T), {}))}
+\`\`\``)
   }
 
   if (msg.author.id !== '277183033344524288') return
@@ -136,7 +136,7 @@ client.on('message', async (msg) => {
 
   if (msg.content === 'cm!forceall') {
     runShit()
-    return msg.channel.send('Coconut malling all channels!');
+    return msg.channel.send('Coconut malling all channels!')
   }
 })
 
